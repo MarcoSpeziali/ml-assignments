@@ -9,8 +9,8 @@
 %
 %     warmUpExercise.m
 %     plotData.m
-%     gradientDescent.m
 %     computeCost.m
+%     gradientDescent.m
 %     gradientDescentMulti.m
 %     computeCostMulti.m
 %     featureNormalize.m
@@ -38,7 +38,7 @@ pause;
 
 %% ======================= Part 2: Plotting =======================
 fprintf('Plotting Data ...\n')
-data = load('ex1data1.txt');
+data = load('machine-learning-ex1/ex1/ex1data1.txt');
 X = data(:, 1); y = data(:, 2);
 m = length(y); % number of training examples
 
