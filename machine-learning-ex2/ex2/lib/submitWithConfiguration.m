@@ -1,5 +1,5 @@
 function submitWithConfiguration(conf)
-  addpath('./lib/jsonlab');
+  addpath('machine-learning-ex2/ex2/lib/jsonlab');
 
   parts = parts(conf);
 

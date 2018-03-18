@@ -23,7 +23,7 @@ clear ; close all; clc
 %  The first two columns contains the exam scores and the third column
 %  contains the label.
 
-data = load('ex2data1.txt');
+data = load('machine-learning-ex2/ex2/ex2data1.txt');
 X = data(:, [1, 2]); y = data(:, 3);
 
 %% ==================== Part 1: Plotting ====================
