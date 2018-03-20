@@ -29,7 +29,7 @@ fprintf('Loading and Visualizing Data ...\n')
 
 % Load from ex6data1: 
 % You will have X, y in your environment
-load('ex6data1.mat');
+load('machine-learning-ex6/ex6/ex6data1.mat');
 
 % Plot training data
 plotData(X, y);
@@ -44,7 +44,7 @@ pause;
 
 % Load from ex6data1: 
 % You will have X, y in your environment
-load('ex6data1.mat');
+load('machine-learning-ex6/ex6/ex6data1.mat');
 
 fprintf('\nTraining Linear SVM ...\n')
 
@@ -81,7 +81,7 @@ fprintf('Loading and Visualizing Data ...\n')
 
 % Load from ex6data2: 
 % You will have X, y in your environment
-load('ex6data2.mat');
+load('machine-learning-ex6/ex6/ex6data2.mat');
 
 % Plot training data
 plotData(X, y);
@@ -97,7 +97,7 @@ fprintf('\nTraining SVM with RBF Kernel (this may take 1 to 2 minutes) ...\n');
 
 % Load from ex6data2: 
 % You will have X, y in your environment
-load('ex6data2.mat');
+load('machine-learning-ex6/ex6/ex6data2.mat');
 
 % SVM Parameters
 C = 1; sigma = 0.1;
@@ -120,7 +120,7 @@ fprintf('Loading and Visualizing Data ...\n')
 
 % Load from ex6data3: 
 % You will have X, y in your environment
-load('ex6data3.mat');
+load('machine-learning-ex6/ex6/ex6data3.mat');
 
 % Plot training data
 plotData(X, y);
@@ -136,7 +136,7 @@ pause;
 
 % Load from ex6data3: 
 % You will have X, y in your environment
-load('ex6data3.mat');
+load('machine-learning-ex6/ex6/ex6data3.mat');
 
 % Try different SVM Parameters here
 [C, sigma] = dataset3Params(X, y, Xval, yval);

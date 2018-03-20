@@ -29,7 +29,7 @@ clear ; close all; clc
 fprintf('\nPreprocessing sample email (emailSample1.txt)\n');
 
 % Extract Features
-file_contents = readFile('emailSample1.txt');
+file_contents = readFile('machine-learning-ex6/ex6/emailSample1.txt');
 word_indices  = processEmail(file_contents);
 
 % Print Stats
@@ -48,7 +48,7 @@ pause;
 fprintf('\nExtracting features from sample email (emailSample1.txt)\n');
 
 % Extract Features
-file_contents = readFile('emailSample1.txt');
+file_contents = readFile('machine-learning-ex6/ex6/emailSample1.txt');
 word_indices  = processEmail(file_contents);
 features      = emailFeatures(word_indices);
 
@@ -65,7 +65,7 @@ pause;
 
 % Load the Spam Email dataset
 % You will have X, y in your environment
-load('spamTrain.mat');
+load('machine-learning-ex6/ex6/spamTrain.mat');
 
 fprintf('\nTraining Linear SVM (Spam Classification)\n')
 fprintf('(this may take 1 to 2 minutes) ...\n')
@@ -83,7 +83,7 @@ fprintf('Training Accuracy: %f\n', mean(double(p == y)) * 100);
 
 % Load the test dataset
 % You will have Xtest, ytest in your environment
-load('spamTest.mat');
+load('machine-learning-ex6/ex6/spamTest.mat');
 
 fprintf('\nEvaluating the trained Linear SVM on a test set ...\n')
 
@@ -125,7 +125,7 @@ pause;
 % Set the file to be read in (change this to spamSample2.txt,
 % emailSample1.txt or emailSample2.txt to see different predictions on
 % different emails types). Try your own emails as well!
-filename = 'spamSample1.txt';
+filename = 'machine-learning-ex6/ex6/spamSample1.txt';
 
 % Read and predict
 file_contents = readFile(filename);
