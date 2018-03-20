@@ -62,25 +62,34 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+% building the Y matrix of results
+I = eye(num_labels);
+Y = zeros(m, num_labels);
+for i = 1 : m
+  Y(i, :) = I(y(i), :);
+end
 
+% add ones to the A matrices
+A1 = [ones(m, 1) X];
+Z2 = A1 * Theta1';
+A2 = [ones(size(Z2), 1) sigmoid(Z2)];
+Z3 = A2 * Theta2';
+A3 = sigmoid(Z3);
 
+% we need to remove the first column of each Theta first
+Jreg = lambda / (2 * m) * (sum(sum(Theta1(:, 2:end) .^2)) + sum(sum(Theta2(:, 2:end) .^2)));
 
+% reuse the cost function with matrix of results
+J = 1 / m * sum(sum((-Y .* log(A3) - (1 - Y) .* log(1 - A3)))) + Jreg;
 
+delta3 = A3 - Y;
+delta2 = (delta3 * Theta2 .* sigmoidGradient([ones(size(Z2), 1) Z2]))(:, 2:end);
 
+Delta2 = delta3' * A2;
+Delta1 = delta2' * A1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-% -------------------------------------------------------------
+Theta1_grad = 1 / m * Delta1 + lambda / m * [zeros(size(Theta1), 1) Theta1(:, 2:end)];
+Theta2_grad = 1 / m * Delta2 + lambda / m * [zeros(size(Theta2), 1) Theta2(:, 2:end)];
 
 % =========================================================================
 
